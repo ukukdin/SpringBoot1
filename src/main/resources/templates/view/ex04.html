@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>자바스크립트! </h3>
+[[${vo}]]<Br>
+[[${arr}]]<Br>
+[[${name}]]
+<!-- 컨트롤러에서 넘어온 데이터를 JSON형식으로 처리 -->
+<script th:inline="javascript">
+var aa='[[${name}]]';
+var bb='[[${arr[0]}]]';
+var cc='[[${vo.last}]]';
+console.log(JSON.parse(aa));
+console.log(JSON.parse(bb));
+console.log(JSON.parse(cc));
+</script>
+
+
+
+</body>
+</html>
